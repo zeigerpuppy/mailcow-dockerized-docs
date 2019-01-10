@@ -95,6 +95,18 @@ $config['password_algorithm_prefix'] = '{SSHA256}';
 $config['password_query'] = "UPDATE mailbox SET password = %P WHERE username = %u";
 ```
 
+### Enable OpenPGP encryption/decryption with Mailvelope and Roundcube
+
+Roundcube supports the [Mailvelope](https://www.mailvelope.com/en/help) browser plugin for Firefox and Chromium/Chrome.
+With this plugin you can easily encrypt and decrypt messages from within Roundcube.
+
+To install:
+- download the plugin from the [Mailvelope website](https://www.mailvelope.com/en/help)
+- install [GnuPG for your platform](https://www.gnupg.org/download/index.html)
+- open the plugin options and import or create your keys for your email address(es)
+- go to your Roundcube webpage ( https://example.org/rc ) and click on the Mailvelope plugin icon in the browser toolbar.  We need to authorise the current domain to work with Mailvelope.  Go to "Advanced Options" and "Activate on current tab" and select OK when presented with the options for the current domain.
+- then reload the Roundcube page and you should see an "Encrypt" toolbar icon when composing messages and encrypted messages will also show a small lock icon and be decrypted (if you have the appropriate key)
+
 ---
 
 Optionally, you can add Roundcube's link to the mailcow Apps list.
